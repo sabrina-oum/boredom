@@ -1,0 +1,41 @@
+:root {
+    --header-height: 70px;
+}
+
+.header {
+    & {
+        font-size: 1.8rem;
+        height: var(--header-height);
+        width: 100%;
+        background-color: #eee;
+
+        .container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        margin-left: 5.2rem;
+    }
+
+    &__link {
+        color: currentColor;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__link--active {
+        color: $color-primary;
+    }
+}
