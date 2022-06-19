@@ -1,0 +1,31 @@
+.activity-card {
+    & {
+        max-width: 36rem;
+        margin: auto;
+        background-color: $color-white;
+        border-radius: 1.2rem;
+        padding: 3rem;
+    }
+
+    &__title {
+        margin-bottom: 2.4rem;
+    }
+
+    &__info-wrapper {
+        margin-bottom: 4rem;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
