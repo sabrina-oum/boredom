@@ -6,63 +6,78 @@ $color-white: #ffffff;
 $color-gray-darker: #212529;
 
 // Typography
-$font-primary: "Inter", sans-serif;
+$font-primary: "Inter",
+sans-serif;
+
+// Border radius
+$component-border-radius: 1.2rem;
 
 // Breakpoints
 // to edit the breakpoints, check the style.scss file
 
-$breakpoints: (
-  xs: 32rem, // ~512px
+$breakpoints: (xs: 32rem, // ~512px
   sm: 48rem, // ~768px
   md: 64rem, // ~1024px
   lg: 80rem, // ~1280px
-  xl: 90rem  // ~1440px
+  xl: 90rem // ~1440px
 ) !default;
 
 @mixin breakpoint($breakpoint, $logic: false) {
-  @if( $logic ) {
-    @media #{$logic} and (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; }
-  } @else {
-    @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; }
+  @if($logic) {
+    @media #{$logic} and (min-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+      @content;
+    }
   }
 }
 
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: $font-primary;
-    color: $color-gray-darker;
-    background-color: #f1f3f5;
-    font-weight: 400;
-    line-height: 1.5;
-    font-size: 1.6rem;
+  font-family: $font-primary;
+  color: $color-gray-darker;
+  background-color: #f1f3f5;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.6rem;
 }
 
-ul, ol {
-    list-style: none;
+ul,
+ol {
+  list-style: none;
 }
 
 .container {
-    width: calc(100% - 32px);
-    margin: 0 auto;
-    
-    @include breakpoint(xs) {
-        width: 1200px;
-    }
+  width: calc(100% - 32px);
+  margin: 0 auto;
+
+  @include breakpoint(xs) {
+    width: 1200px;
+  }
 }
 
 .content {
-  padding-top: 8rem;
+  padding-top: 4rem;
+}
+
+.page-title {
+  margin-bottom: 2rem;
+  font-weight: 500;
 }

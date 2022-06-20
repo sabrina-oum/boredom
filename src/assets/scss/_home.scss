@@ -1,0 +1,17 @@
+.home {
+    text-align: center;
+}
+
+.filter-form {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: $component-border-radius;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+
+    &>div {
+        margin: 0 1rem;
+    }
+}

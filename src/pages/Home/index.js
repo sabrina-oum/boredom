@@ -1,6 +1,11 @@
+import Filter from "./components/Filter";
+
 const Home = () => {
   return (
-    <div className="Home">
+    <div className="home">
+      <h1 className="page-title">Fight boredom and generate an activity to do</h1>
+      <button className="btn btn--primary btn--lg">Generate another activity</button>
+      <Filter />
       <div className="activity-card">
         <h2 className="activity-card__title">Express.js course</h2>
         <div className="activity-card__info-wrapper">
